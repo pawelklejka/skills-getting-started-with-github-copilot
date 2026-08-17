@@ -59,19 +59,103 @@ section h3 {
 
 .activity-card {
   margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  padding: 18px 16px;
+  border: 1px solid #dfe7ff;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffffff 0%, #f4f7ff 100%);
+  box-shadow: 0 2px 8px rgba(26, 35, 126, 0.08);
 }
 
 .activity-card h4 {
   margin-bottom: 10px;
-  color: #0066cc;
+  color: #1a237e;
+  font-size: 1.2rem;
 }
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.activity-card .description {
+  color: #444;
+  font-style: italic;
+}
+
+.participants {
+  margin-top: 12px;
+  padding: 12px 14px;
+  background-color: #edf3ff;
+  border: 1px solid #d7e4ff;
+  border-radius: 8px;
+}
+
+.participants strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #1a237e;
+}
+
+.participants ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  color: #2f3a4a;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+}
+
+.participant-item + .participant-item,
+.participant-empty + .participant-item {
+  border-top: 1px solid #d9e5ff;
+}
+
+.participant-item span {
+  flex: 1;
+  word-break: break-word;
+}
+
+.remove-participant {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ef5350 0%, #d32f2f 100%);
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(211, 47, 47, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.remove-participant:hover {
+  background: linear-gradient(135deg, #e53935 0%, #b71c1c 100%);
+  transform: translateY(-1px) scale(1.04);
+  box-shadow: 0 4px 10px rgba(211, 47, 47, 0.32);
+  filter: brightness(1.02);
+}
+
+.remove-participant:focus-visible {
+  outline: 3px solid rgba(26, 35, 126, 0.25);
+  outline-offset: 2px;
+}
+
+.participant-empty {
+  padding: 6px 0;
+  color: #5d6b82;
 }
 
 .form-group {
